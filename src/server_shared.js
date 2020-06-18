@@ -48,7 +48,7 @@ if (Meteor.isServer) {
     }
     makeFuncs = function(size) {
       var bufferList, flush, total, transform;
-      bufferList = [new Buffer(0)];
+      bufferList = [Buffer.alloc(0)];
       total = 0;
       flush = function(cb) {
         var lastBuffer, newBuffer, outSize, outputBuffer;

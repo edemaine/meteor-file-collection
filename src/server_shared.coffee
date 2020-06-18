@@ -38,7 +38,7 @@ if Meteor.isServer
 
    share.streamChunker = (size = share.defaultChunkSize) ->
       makeFuncs = (size) ->
-         bufferList = [ new Buffer(0) ]
+         bufferList = [ Buffer.alloc(0) ]
          total = 0
          flush = (cb) ->
             outSize = if total > size then size else total
