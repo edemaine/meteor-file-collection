@@ -4,7 +4,7 @@
 ###     See included LICENSE file for details.
 ***************************************************************************/
 
-var currentVersion = '1.3.9';
+var currentVersion = '1.3.10';
 
 Package.describe({
   summary: 'Collections that efficiently store files using MongoDB GridFS (noncoffee version)',
@@ -14,8 +14,7 @@ Package.describe({
 });
 
 Npm.depends({
-  // latest mongodb driver is 2.2.x, but early revs, currently seems broken
-  mongodb: '2.1.21',
+  mongodb: '3.1.13',
   'gridfs-locking-stream': '1.1.1',
   'gridfs-locks': '1.3.4',
   dicer: '0.2.5',

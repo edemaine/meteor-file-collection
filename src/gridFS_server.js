@@ -42,7 +42,7 @@ FileCollection = (function(superClass) {
       this.root = share.defaultRoot;
     }
     this.chunkSize = (ref = options.chunkSize) != null ? ref : share.defaultChunkSize;
-    this.db = Meteor.wrapAsync(mongodb.MongoClient.connect)(process.env.MONGO_URL, {});
+    this.db = Meteor.wrapAsync(mongodb.MongoClient.connect)(process.env.MONGO_URL, {}).db();
     this.lockOptions = {
       timeOut: (ref1 = (ref2 = options.locks) != null ? ref2.timeOut : void 0) != null ? ref1 : 360,
       lockExpiration: (ref3 = (ref4 = options.locks) != null ? ref4.lockExpiration : void 0) != null ? ref3 : 90,
